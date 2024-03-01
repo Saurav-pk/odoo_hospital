@@ -9,6 +9,8 @@
         'data/sequence.xml',
         'views/menu.xml',
         'views/patients.xml',
-        'views/doctor.xml'
+        'views/doctor.xml',
+        'views/appointment.xml',
+        'views/settings.xml'
     ]
 }
