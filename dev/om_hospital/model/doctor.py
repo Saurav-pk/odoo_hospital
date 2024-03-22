@@ -1,13 +1,15 @@
 from odoo import api, fields, models, _
 
+
 class HospitalDoctor(models.Model):
     _name = "hospital.doctor"
-    _inherit = 'mail.thread'
     _description = "Doctor Records"
     _rec_name = 'name'
 
     name = fields.Char(String='Name', required=True, tracking=True)
-    gender = fields.Selection([('male', 'Male'), ('female', 'Female'), ('others', 'Others')], string='Gender', tracking=True)
+    gender = fields.Selection([('male', 'Male'), ('female', 'Female'), ('others', 'Others')], string='Gender',
+                              tracking=True)
+    specialization = fields.Char(string='Specialization')
 
     ref = fields.Char(String="Reference", required=True)
     active = fields.Boolean(default=True)

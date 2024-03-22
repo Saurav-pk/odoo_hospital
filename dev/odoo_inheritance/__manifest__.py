@@ -8,9 +8,10 @@
     """,
     'author': 'saurav',
     'website': 'www.hospital.com',
-    'depends': ['base'],
+    'depends': ['base', 'sale', 'sale_stock'],
     'data': [
-        'views/view.xml',
+        'views/sale_order_view.xml',
+        'views/employee_view.xml',
         'security/ir.model.access.csv',
     ],
     'installable': True,

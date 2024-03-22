@@ -1,0 +1,7 @@
+<odoo>
+    <menuitem
+            id="menu_hr_employee_form"
+            name="Employee Joining"
+            parent="hr.menu_hr_root"
+            sequence="20"/>
+</odoo>

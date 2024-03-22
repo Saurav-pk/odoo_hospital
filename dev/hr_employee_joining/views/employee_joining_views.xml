@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+        <record id="view_hr_employee_form" model="ir.ui.view">
+            <field name="name">hr.employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='work_email']" position="after">
+                    <field name="invited"/>
+                    <field name="joined"/>
+                     <button name="send_invitation_email" type="object" string="Send Invitation" class="oe_highlight"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="action_hr_employee_form" model="ir.actions.act_window">
+            <field name="name">HR Employee Form</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_hr_employee_form"/>
+        </record>
+
+        <menuitem
+            id="menu_hr_employee_form_action"
+            name="Employee Joining"
+            parent="menu_hr_employee_form"
+            action="action_hr_employee_form"/>
+    </data>
+</odoo>

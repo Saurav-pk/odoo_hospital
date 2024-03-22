@@ -1,0 +1,12 @@
+<odoo>
+    <template id="save_additional_detail_template" name="Save Additional Detail">
+        <form method="post" action="/save_additional_detail">
+            <input type="hidden" name="employee_id" t-att-value="employee.id"/>
+            <label for="certificate">Certificate:</label>
+            <input type="file" name="certificate" required="required"/><br/>
+            <label for="certificate_filename">Certificate Filename:</label>
+            <input type="text" name="certificate_filename"/><br/>
+            <input type="submit" value="Save"/>
+        </form>
+    </template>
+</odoo>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="appointments_page">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Appointments</h1>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Patient</th>
+                            <th>Doctor</th>
+                            <th>Appointment Date</th>
+                            <th>Appointment Time</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="appointments" t-as="appointment">
+                            <tr>
+                                <td><t t-esc="appointment.name.name"/></td>
+                                <td><t t-esc="appointment.doctor.name"/></td>
+                                <td><t t-esc="appointment.appointment_date"/></td>
+                                <td><t t-esc="appointment.appointment_time"/></td>
+                                <td><t t-esc="appointment.amount"/></td>
+                                <td><t t-esc="appointment.state"/></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+</odoo>

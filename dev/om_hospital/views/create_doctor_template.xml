@@ -1,0 +1,30 @@
+<odoo>
+    <template id="create_doctor_template">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Create Doctor</h1>
+                <form method="post" action="/hospital/doctor/create">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required="1"/>
+                    <br/>
+                    <label for="gender">Gender:</label>
+                    <br/>
+                    <select id="gender" name="gender" required="1">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">Others</option>
+                    </select>
+                    <br/>
+                    <label for="specialization">Specialization:</label>
+                    <input type="text" id="specialization" name="specialization" required="1"/>
+                    <br/>
+                    <label for="ref">ID:</label>
+                    <input type="text" id="ref" name="ref" required="1"/>
+                    <br/>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </t>
+    </template>
+</odoo>

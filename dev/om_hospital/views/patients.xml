@@ -12,6 +12,7 @@
                         </h1>
                     </div>
                     <group>
+                        <field name="image"/>
                         <field name="name"/>
                         <field name="is_Child"/>
                         <field name="age"/>
@@ -21,10 +22,6 @@
                         <field name="tag_ids" widget="many2many_tags"/>
                     </group>
                 </sheet>
-                <div class="oe_chatter">
-                        <field name="message_follower_ids"/>
-                        <field name="message_ids" options="{'post_refresh': 'recipients'}"/>
-                </div>
             </form>
         </field>
     </record>

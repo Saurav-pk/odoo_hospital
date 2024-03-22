@@ -4,9 +4,9 @@ from odoo.exceptions import ValidationError
  
 class HospitalPatient(models.Model):
     _name = "hospital.patient"
-    _inherit = 'mail.thread'
     _description = "Patient Records"
 
+    image = fields.Binary(string='Image')
     name = fields.Char(String='Name', required=True, tracking=True)
     age = fields.Integer(String="Age", tracking=True)
     is_Child = fields.Boolean(String="Is Child ?", tracking=True)
